@@ -18,8 +18,8 @@ const HeroBanner = ({ heroBanner }) => {
           <Link href={`/product/${heroBanner.product}`}>
           <button type='button'>{heroBanner.buttonText}</button></Link>
         <div className='"desc'>
-          <h5>Description</h5>
-          <p>{heroBanner.desc}</p>
+          {/* <h5>Description</h5> */}
+          <p className='heroBanner_desc'>{heroBanner.desc}</p>
         </div>
         </div>
       </div>
