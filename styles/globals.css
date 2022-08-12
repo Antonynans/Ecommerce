@@ -109,7 +109,7 @@ nav{
 max-width: 1400px; 
 margin: auto;
 width: 100%;
-
+position: relative;
 }
 /* .layout{
   padding: 10px;
@@ -340,6 +340,8 @@ text-align: end;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  position: relative;
+  z-index: 20;
 }
 .banner-desc .left h3{
   font-weight: 900;
@@ -362,6 +364,8 @@ text-align: end;
 .banner-desc .right h3{
   font-weight: 800;
   font-size: 60px;
+  position: relative;
+  z-index: 20;
 }
 .banner-desc .right p{
   font-size: 18px;

@@ -39,7 +39,7 @@ const Navbar = () => {
         </div>
         <Link href={"/"}>
           <a>
-            <h1 className="logo">CodeWithMarish</h1>
+            <h1 className="logo">AudioStore</h1>
           </a>
         </Link>
         <div className='navbar-container'>
