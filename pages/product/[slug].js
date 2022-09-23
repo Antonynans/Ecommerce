@@ -17,9 +17,9 @@ const ProductDetails = ({ product, products }) => {
   }
 
   return (
-    <div>
+    <div className='main-container' style={{flexFlow:'column'}}>
       <div className="product-detail-container">
-        <div>
+        <div className='product-detail-desc'>
           <div className="image-container">
             <img src={urlFor(image && image[index])} className="product-detail-image" />
           </div>

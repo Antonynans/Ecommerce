@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { AiOutlineShopping } from 'react-icons/ai'
+import React, { useState } from "react";
+import Link from "next/link";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import NavItem from "./NavItem";
 
-import { Cart } from './';
-import { useStateContext} from '../context/stateContext';
+import { Cart } from "./";
+import { useStateContext } from "../context/stateContext";
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
@@ -19,17 +19,9 @@ const Navbar = () => {
   ];
 
   return (
-    // <div className="navbar-container">
-    //   <p className="logo">
-    //     <Link href="/">Smart devices</Link>
-    //   </p>
-
-      
-    // </div>
-
     <header>
       <nav className={`nav`}>
-      <div
+        <div
           onClick={() => setNavActive(!navActive)}
           className={`nav__menu-bar`}
         >
@@ -42,32 +34,34 @@ const Navbar = () => {
             <h1 className="logo">AudioStore</h1>
           </a>
         </Link>
-        <div className='navbar-container'>
-        
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-          {MENU_LIST.map((menu, idx) => (
-            <div
-              onClick={() => {
-                setActiveIdx(idx);
-                setNavActive(false);
-              }}
-              key={menu.text}
-            >
-              <NavItem active={activeIdx === idx} {...menu} />
-            </div>
-          ))}
-        </div>
-        <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
-        <AiOutlineShopping />
-        <span className="cart-item-qty">{totalQuantities}</span>
-      </button>
+        <div className="navbar-container">
+          <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+            {MENU_LIST.map((menu, idx) => (
+              <div
+                onClick={() => {
+                  setActiveIdx(idx);
+                  setNavActive(false);
+                }}
+                key={menu.text}
+              >
+                <NavItem active={activeIdx === idx} {...menu} />
+              </div>
+            ))}
+          </div>
+          <button
+            type="button"
+            className="cart-icon"
+            onClick={() => setShowCart(true)}
+          >
+            <AiOutlineShoppingCart />
+            <span className="cart-item-qty">{totalQuantities}</span>
+          </button>
 
-      {showCart && <Cart />}
-      </div>
+          {showCart && <Cart />}
+        </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
-
+export default Navbar;

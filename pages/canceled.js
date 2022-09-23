@@ -5,9 +5,7 @@ import { useRouter } from "next/router";
 export default function cancelled() {
   const router = useRouter();
 
-  // useEffect(() => (
-  //   router.push('/')
-  // ))
+  
   return (
     <div>cancelled</div>
   )
